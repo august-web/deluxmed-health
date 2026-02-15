@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, Menu, X, Calendar } from "lucide-react";
+import { Phone, Menu, X, Calendar, HeartPulse } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -33,9 +33,14 @@ const Header = () => {
 
       {/* Main nav */}
       <div className="container flex items-center justify-between py-3">
-        <Link to="/" className="flex flex-col leading-tight">
-          <span className="text-lg font-bold font-display text-foreground tracking-tight">DeluxMed</span>
-          <span className="text-[11px] text-muted-foreground leading-none">Primary &amp; Behavioral Health</span>
+        <Link to="/" className="flex items-center gap-2 leading-tight">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 border border-primary text-primary">
+            <HeartPulse className="h-5 w-5" />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-lg font-bold font-display text-foreground tracking-tight">DeluxMed</span>
+            <span className="text-[11px] text-muted-foreground leading-none">Primary &amp; Behavioral Health</span>
+          </div>
         </Link>
 
         {/* Desktop nav */}
