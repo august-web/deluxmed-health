@@ -42,7 +42,7 @@ const Contact = () => (
               <Clock className="h-5 w-5 text-primary mt-1 shrink-0" />
               <div>
                 <h3 className="font-semibold font-sans text-foreground">Hours</h3>
-                <p className="text-muted-foreground">Please call to confirm office hours and availability.</p>
+                <p className="text-muted-foreground">Mondays @ 9AM - 6PM to Fridays @ 10AM - 5PM</p>
               </div>
             </div>
           </div>

@@ -19,7 +19,7 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <header className="sticky top-0 z-40 bg-card/95 backdrop-blur-sm border-b border-border shadow-sm">
       {/* Top bar */}
       <div className="bg-primary">
         <div className="container flex items-center justify-between py-1.5 text-sm text-primary-foreground">
