@@ -29,6 +29,15 @@ const PrimaryCare = () => (
     <Helmet>
       <title>Primary Care in Baltimore, MD | DeluxMed Health</title>
       <meta name="description" content="Comprehensive primary care in Baltimore. Preventive care, chronic disease management, annual physicals, and acute illness treatment. In-person and telehealth appointments available." />
+      <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL || "https://deluxmed.com"}/primary-care-baltimore`} />
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Primary Care",
+        "areaServed": { "@type": "AdministrativeArea", "name": "Baltimore, MD" },
+        "provider": { "@type": "MedicalOrganization", "name": "DeluxMed Health Group, LLC" },
+        "url": `${(import.meta.env.VITE_SITE_URL || "https://deluxmed.com")}/primary-care-baltimore`
+      })}</script>
     </Helmet>
 
     <section className="bg-primary">

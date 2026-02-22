@@ -19,6 +19,7 @@ const Insurance = () => (
     <Helmet>
       <title>Insurance & Payment Information | DeluxMed Health Baltimore</title>
       <meta name="description" content="Insurance and payment information for DeluxMed Primary & Behavioral Health Services. We accept Medicare, Medicaid, and major insurance plans. Call to verify your coverage." />
+      <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL || "https://deluxmed.com"}/insurance-payment`} />
     </Helmet>
 
     <section className="bg-section-alt">

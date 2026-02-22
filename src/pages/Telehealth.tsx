@@ -26,6 +26,15 @@ const Telehealth = () => (
     <Helmet>
       <title>Telehealth Services Maryland | Virtual Care | DeluxMed</title>
       <meta name="description" content="HIPAA-compliant telehealth services throughout Maryland. Virtual primary care, behavioral health, and chronic disease management. Secure video visits from the comfort of your home." />
+      <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL || "https://deluxmed.com"}/telehealth-maryland`} />
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Telehealth",
+        "areaServed": { "@type": "AdministrativeArea", "name": "Maryland" },
+        "provider": { "@type": "MedicalOrganization", "name": "DeluxMed Health Group, LLC" },
+        "url": `${(import.meta.env.VITE_SITE_URL || "https://deluxmed.com")}/telehealth-maryland`
+      })}</script>
     </Helmet>
 
     <section className="bg-primary">

@@ -19,6 +19,15 @@ const BehavioralHealth = () => (
     <Helmet>
       <title>Behavioral Health & Mental Health Services Baltimore | DeluxMed</title>
       <meta name="description" content="Mental health services in Baltimore including anxiety, depression, PTSD, and mood disorder treatment. Board-certified psychiatric nurse practitioner. In-person and secure telehealth available." />
+      <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL || "https://deluxmed.com"}/behavioral-health-baltimore`} />
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Behavioral Health",
+        "areaServed": { "@type": "AdministrativeArea", "name": "Baltimore, MD" },
+        "provider": { "@type": "MedicalOrganization", "name": "DeluxMed Health Group, LLC" },
+        "url": `${(import.meta.env.VITE_SITE_URL || "https://deluxmed.com")}/behavioral-health-baltimore`
+      })}</script>
     </Helmet>
 
     <section className="bg-accent">

@@ -8,6 +8,7 @@ const Contact = () => (
     <Helmet>
       <title>Contact & Schedule Appointment | DeluxMed Health Baltimore</title>
       <meta name="description" content="Schedule an appointment at DeluxMed Primary & Behavioral Health Services in Baltimore, MD. Call (240) 780-8930 or request an appointment online. In-person and telehealth available." />
+      <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL || "https://deluxmed.com"}/contact`} />
     </Helmet>
 
     <section className="bg-primary">

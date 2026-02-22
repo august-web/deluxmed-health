@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Shield, Award, CreditCard, Heart, Brain, Activity, Stethoscope, Phone, Calendar, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import PageLayout from "@/components/layout/PageLayout";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Helmet } from "react-helmet-async";
@@ -23,6 +24,7 @@ const Index = () => {
       <Helmet>
         <title>DeluxMed Primary & Behavioral Health | Baltimore, MD</title>
         <meta name="description" content="Integrated primary care and behavioral health services in Baltimore, Maryland. Board-certified nurse practitioner offering in-person and secure telehealth visits. Schedule your appointment today." />
+        <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL || "https://deluxmed.com"}/`} />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "MedicalBusiness",
@@ -141,9 +143,28 @@ const Index = () => {
           <p className="max-w-xl mx-auto opacity-90 leading-relaxed">
             Our primary location is in Baltimore, Maryland. Through our secure telehealth platform, we also serve patients throughout Maryland—bringing quality healthcare wherever you are.
           </p>
-          <Button asChild variant="outline" size="lg" className="mt-6 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-            <Link to="/telehealth-maryland">Learn About Telehealth</Link>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              {/* Use aria-label so assistive tech users can access the tooltip description even when hover is not available */}
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="mt-6 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                <Link
+                  to="/telehealth-maryland"
+                  aria-label="Learn about DeluxMed telehealth services available throughout Maryland"
+                >
+                  Learn About Telehealth
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            {/* Tooltip content provides supplementary context with smooth 200ms fade transitions configured in the tooltip component */}
+            <TooltipContent side="top">
+              HIPAA-compliant virtual visits across Maryland with secure telehealth.
+            </TooltipContent>
+          </Tooltip>
         </div>
       </section>
 

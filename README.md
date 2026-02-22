@@ -60,6 +60,30 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Key navigation element: Learn About Telehealth
+
+The primary call-to-action link for telehealth is the “Learn About Telehealth” element on the home page service area section. It is implemented as a styled React Router `<Link>` and:
+
+- Navigates to `/telehealth-maryland` without a full page reload.
+- Uses the shared button styles for consistent visual appearance and accessible focus-visible states.
+- Meets WCAG 2.1 AA expectations for keyboard focus visibility and target size.
+
+## Testing
+
+Automated tests are implemented with Vitest and Testing Library.
+
+- To run the test suite:
+
+```sh
+npm test
+```
+
+Current tests include checks that:
+
+- The “Learn About Telehealth” link renders with the correct `href`.
+- The link inherits accessible focus-visible styles.
+- Clicking the link from the home page navigates to the Telehealth page.
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.

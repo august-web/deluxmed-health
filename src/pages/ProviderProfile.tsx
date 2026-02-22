@@ -27,6 +27,15 @@ const ProviderProfile = () => (
     <Helmet>
       <title>Doreen Ackom-Owusu, DNP(c), MSN, FNP-BC, PMHNP-C | DeluxMed</title>
       <meta name="description" content="Meet Doreen Ackom-Owusu, a board-certified family and psychiatric nurse practitioner at DeluxMed in Baltimore. Dual-certified in primary care and mental health with advanced clinical expertise." />
+      <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL || "https://deluxmed.com"}/doreen-ackom-owusu-nurse-practitioner`} />
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Doreen Ackom-Owusu",
+        "jobTitle": "Nurse Practitioner",
+        "affiliation": { "@type": "MedicalOrganization", "name": "DeluxMed Health Group, LLC" },
+        "url": `${(import.meta.env.VITE_SITE_URL || "https://deluxmed.com")}/doreen-ackom-owusu-nurse-practitioner`
+      })}</script>
     </Helmet>
 
     <section className="bg-section-alt">

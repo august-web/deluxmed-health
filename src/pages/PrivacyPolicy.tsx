@@ -6,6 +6,7 @@ const PrivacyPolicy = () => (
     <Helmet>
       <title>Privacy Policy & HIPAA Notice | DeluxMed Health</title>
       <meta name="description" content="Privacy policy and HIPAA notice for DeluxMed Primary & Behavioral Health Services. Learn how we protect your personal health information." />
+      <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL || "https://deluxmed.com"}/privacy-policy`} />
     </Helmet>
 
     <section className="bg-section-alt">

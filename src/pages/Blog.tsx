@@ -39,6 +39,7 @@ const Blog = () => (
     <Helmet>
       <title>Health Blog & Resources | DeluxMed Primary & Behavioral Health</title>
       <meta name="description" content="Health education resources from DeluxMed. Articles on chronic disease management, mental health, preventive care, and telehealth. Stay informed about your health." />
+      <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL || "https://deluxmed.com"}/blog`} />
     </Helmet>
 
     <section className="bg-section-alt">
